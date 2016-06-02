@@ -3,20 +3,21 @@ import React from 'react';
 class Art extends React.Component {
   render() {
     var that = this;
+    //TODO Add all the patterns
     var patterns = {
       "-": "XXXXXXXX\n",
       "a": "XXOOOXXX\nXXXOOOXX\nXXOXOOXX\nXXOXXOOX\nXOOOOOOX\nXOXXXOOO\nOOOXOOOO\nXXXXXXXX\n",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": "",
-      "f": "",
-      "g": "",
+      "b": "OOOOOOOX\nOOXXXXOO\nOOXXXXOO\nOOOOOOOX\nOOOOOOOX\nOOXXXXOO\nOOXXXXOO\nOOOOOOOX\n",
+      "c": "XXOOOOXX\nXOOXXOOX\nOOXXXXXO\nOOXXXXXX\nOOXXXXXX\nOOXXXXXO\nXOOXXOOX\nXXOOOOXX\n",
+      "d": "OOOOOOXX\nOOXXXOOX\nOOXXXXOO\nOOXXXXOO\nOOXXXXOO\nOOXXXXOO\nOOXXXOOX\nOOOOOOXX\n",
+      "e": "OOOOOOOO\nOOXXXXXX\nOOXXXXXX\nOOOOOOOO\nOOXXXXXX\nOOXXXXXX\nOOOOOOOO\nOOOOOOOO\n",
+      "f": "OOOOOOOO\nOOXXXXXX\nOOXXXXXX\nOOOOOXXX\nOOOOOXXX\nOOXXXXXX\nOOXXXXXX\nOOXXXXXX\n",
+      "g": "XOOOOOOO\nOOOOOOOX\nOOOXXXXX\nOOXXXXXX\nOOXXOOOO\nOOXXXXOO\nXOOXXXOO\nXXOOOOOO\n",
       "h": "OOOXXOOO\nXOOXXOOX\nXOOXXOOX\nXOOOOOOX\nXOOXXOOX\nXOOXXOOX\nOOOXXOOO\nXXXXXXXX\n",
-      "i": "",
-      "j": "",
+      "i": "OOOOOOOO\nXXXOOXXX\nXXXOOXXX\nXXXOOXXX\nXXXOOXXX\nXXXOOXXX\nXXXOOXXX\nOOOOOOOO\n",
+      "j": "XXXXXXOO\nXXXXXXOO\nXXXXXXOO\nXXXXXXOO\nXXXXXXOO\nOOXXXXOO\nOOXXXXOO\nXOOOOOOX\n",
       "k": "OOOOXOOO\nXOOXXOOX\nXOOXOOXX\nXOOOOXXX\nXOOXOOXX\nXOOXXOOX\nOOOOXOOO\nXXXXXXXX\n",
-      "l": "",
+      "l": "OOXXXXXX\nOOXXXXXX\nOOXXXXXX\nOOXXXXXX\nOOXXXXXX\nOOXXXXXX\nOOOOOOOO\nOOOOOOOO\n",
       "m": "",
       "n": "OOOXXOOO\nXOOOXXOX\nXOOOXXOX\nXOXOOXOX\nXOXOOXOX\nXOXXOOOX\nOOOXOOOX\nXXXXXXXX\n",
       "o": "XXOOOOXX\nXOOXXOOX\nXOOXXOOX\nXOOXXOOX\nXOOXXOOX\nXOOXXOOX\nXXOOOOXX\nXXXXXXXX\n",
@@ -37,14 +38,14 @@ class Art extends React.Component {
     var phrase = '-' + this.props.phrase.toLowerCase();
     if (phrase.length > 1) {
       phrase = phrase.replace(/ /gi, '-');
-      var art = phrase.split('').map(function(v, k) {
+      art = phrase.split('').map(function (v, k) {
         return patterns[v].replace(/x/gi, that.props.shading).replace(/o/gi, that.props.fill);
       });
     }
 
     return (
       <div className="Art" hidden={this.props.phrase === ''}>
-        <pre id="art">{art}</pre>
+        <pre id="art" ref="art">{art}</pre>
       </div>
     );
   }
