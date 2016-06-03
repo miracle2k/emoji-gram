@@ -41,6 +41,7 @@
 }
 
 .Phrase .tip{
+    display: none;
   position: absolute;
   top: 22px;
   right: 90px;
@@ -52,6 +53,7 @@
 }
 
 .Phrase .tip:after{
+    display: none;
   content: ' ';
   position: absolute;
   top: 0px;
