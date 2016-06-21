@@ -35,6 +35,7 @@ $ npm run build
 
 * **Michael Dick** - *Developer* - [MichaelDick](https://github.com/michaeldick)
 * **Amitava Saha** - *Developer* - [amitava82](https://github.com/amitava82)
-* **Eric Lobdell** - *Designer* - [EricBenjamin](https://github.com/EricBenjamin)
+* **Eric Lobdell** - *Interface Designer* - [EricBenjamin](https://github.com/EricBenjamin)
+* **James Edmonson** - *Type Designer* - [OhNo Type](http://ohnotype.co)
 
 
