@@ -1,8 +1,8 @@
-# Emoji Art – reactjs, express, and webpack
+# OhNo_emoji - A reactjs emoji word-art generator.
 
-Like ascii art, type a phrase and this app will render emoji letter art. [Demo](http://michaeldick.github.io/emojiart)
+Like ascii art, type a phrase and this app will render emoji letterforms. [Demo](http://lobdell.me/ohno2)
 
-![screenshot](screenshot.gif)
+![screenshot](ohno_emoji.png)
 
 ### Install
 First clone or download the app to your local machine, then install all dependencies with:
@@ -30,4 +30,10 @@ To bundle one time and NOT run a watch:
 $ npm run build
 ```
 
-Hope you enjoy, cheers!
+## Authors
+
+* **Michael Dick** - *Developer* - [MichaelDick](https://github.com/michaeldick)
+* **Amitava Saha** - *Developer* - [amitava82](https://github.com/amitava82)
+* **Eric Lobdell** - *Designer* - [EricBenjamin](https://github.com/EricBenjamin)
+
+
