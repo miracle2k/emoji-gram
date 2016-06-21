@@ -1,6 +1,6 @@
 # OhNo - emoji 
 
-*A reactjs emoji word-art generator*
+### A reactjs emoji word-art generator
 Like ascii art, type a phrase and this app will render emoji letterforms. [Demo](http://lobdell.me/ohno2)
 
 ![screenshot](ohno_emoji.png)
