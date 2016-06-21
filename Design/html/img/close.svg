@@ -1,1 +1,17 @@
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>X</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Open" transform="translate(-312.000000, -56.000000)" fill="#CB5B5B">
+            <g id="Input-Field" transform="translate(37.000000, 27.000000)">
+                <g id="X" transform="translate(275.000000, 29.000000)">
+                    <rect id="Rectangle-6" transform="translate(8.500000, 8.500000) rotate(45.000000) translate(-8.500000, -8.500000) " x="8" y="-2" width="1" height="21"></rect>
+                    <rect id="Rectangle-6-Copy" transform="translate(8.500000, 8.500000) rotate(-45.000000) translate(-8.500000, -8.500000) " x="8" y="-2" width="1" height="21"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
