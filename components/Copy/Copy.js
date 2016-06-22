@@ -41,7 +41,7 @@ class Copy extends React.Component {
       <div className="Copy" hidden={this.props.phrase === ''}>
         <button className="select-btn" type="button" id="copy" data-clipboard-target="#art" onClick={this._handleClick}>
           <span hidden={this.state.showAlert}>SELECT EMOJI</span>
-          <span hidden={!this.state.showAlert}>Copied!</span>
+          <span hidden={!this.state.showAlert}>SELECT EMOJI</span>
         </button>
       </div>
     );
