@@ -1,5 +1,5 @@
 .Copy {
-  width: 60%;
+  width: 40%;
   height: 30px;
   border-right: 1px solid #E2E2E2;
   border-left: 1px solid #E2E2E2;
@@ -44,11 +44,8 @@
   -webkit-transform: translateY(300px);
 }
 
-/*@media only screen and (max-width: 600px) {*/
-  /*.Copy {*/
-    /*position: fixed;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
-    /*width: 100%;*/
-  /*}*/
-/*}*/
+@media only screen and (max-width: 600px) {
+  .Copy {
+    width: 60%;
+  }
+}
