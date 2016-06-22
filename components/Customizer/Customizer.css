@@ -1,8 +1,7 @@
 .Customizer .roll-cover {
-    /*position: fixed;*/
+    position: fixed;
     /*width: 60px;*/
     height: 130px;
-    position: absolute;
     width: 18%;
     pointer-events: none;
     margin-top: -20px;
@@ -41,8 +40,9 @@
 
 .Customizer .left {
     /*width: 60px;*/
+    /*position: fixed;*/
     width: 18%;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     left: 0px;
     z-index: 100;
