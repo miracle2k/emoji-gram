@@ -1,6 +1,8 @@
 import React from 'react';
 import emojis from './emojis';
 
+import css from './Customizer.css';
+
 class Customizer extends React.Component {
   constructor(props) {
     super();
@@ -10,12 +12,12 @@ class Customizer extends React.Component {
     this.setEmoji = this.setEmoji.bind(this);
   }
 
-  _handleKeyDown(e) {
-    var allowed = [91, 17, 32, 8];
-    if (allowed.indexOf(e.which) < 0) {
-      e.preventDefault();
-    }
-  }
+  // _handleKeyDown(e) {
+  //   var allowed = [91, 17, 32, 8];
+  //   if (allowed.indexOf(e.which) < 0) {
+  //     e.preventDefault();
+  //   }
+  // }
 
 
   _handleChange(e) {
@@ -50,7 +52,10 @@ class Scroller extends React.Component{
     }
     onScroll(e){
         let scrollTop = e.target.scrollTop;
-        const itemIdx = Math.round(scrollTop/20);
+        const itemIdx = Math.round(scrollTop/28);
+        console.log("top: ", scrollTop);
+        console.log('idx: ', itemIdx);
+
         const {type, emojis, onEmojiSelect} = this.props;
         const em = emojis[itemIdx];
 
@@ -80,7 +85,7 @@ class Scroller extends React.Component{
 
         return (
             <div className={this.props.className} ref={this.props.type}>
-                <div className="roll-cover"/>
+                <div className="roll-cover"></div>
                 <ul className="emoji-roll">
                     {emojisList}
                 </ul>

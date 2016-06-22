@@ -1,6 +1,8 @@
 import React from 'react';
 import Clipboard from 'clipboard';
 
+import css from './Copy.css';
+
 class Copy extends React.Component {
   constructor() {
     super();

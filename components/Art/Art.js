@@ -1,5 +1,7 @@
 import React from 'react';
 
+import css from './Art.css';
+
 class Art extends React.Component {
   render() {
     var that = this;
@@ -62,7 +64,8 @@ class Art extends React.Component {
     if (phrase.length > 1) {
       phrase = phrase.replace(/ /gi, '-');
       art = phrase.split('').map(function (v, k) {
-        return patterns[v].replace(/x/gi, that.props.shading).replace(/o/gi, that.props.fill);
+		  var pattern = patterns[v] || patterns['-'];
+		  return pattern.replace(/x/gi, that.props.shading).replace(/o/gi, that.props.fill);
       });
     }
 
