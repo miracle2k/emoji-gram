@@ -2,6 +2,7 @@
  * Created by amitava on 02/06/16.
  */
 import React from 'react';
+import css from './Emoji.css';
 
 class Emoji extends React.Component {
 

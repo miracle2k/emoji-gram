@@ -8,6 +8,8 @@ import Customizer from '../components/Customizer/Customizer.js';
 import Art from '../components/Art/Art.js';
 import Copy from '../components/Copy/Copy.js';
 
+import css from './app.css';
+
 // main app that binds everything together
 class App extends React.Component {
     constructor() {
