@@ -52,7 +52,10 @@ class Scroller extends React.Component{
     }
     onScroll(e){
         let scrollTop = e.target.scrollTop;
-        const itemIdx = Math.round(scrollTop/20);
+        const itemIdx = Math.round(scrollTop/28);
+        console.log("top: ", scrollTop);
+        console.log('idx: ', itemIdx);
+
         const {type, emojis, onEmojiSelect} = this.props;
         const em = emojis[itemIdx];
 
