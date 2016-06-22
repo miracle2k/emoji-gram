@@ -5,7 +5,7 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/components/'));
 app.get("/", function(req, res) {
-   res.sendfile(__dirname+'/app.html')
+   res.sendfile(__dirname+'/app/app.html')
 });
 
 // Run it
