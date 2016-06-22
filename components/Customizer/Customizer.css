@@ -19,7 +19,10 @@
 }
 
 .emoji-roll li.empty{
-
+    
+}
+.emoji-roll li {
+	height: 30px;
 }
 
 .Customizer .emoji-roll li{
@@ -54,11 +57,14 @@
   -webkit-transform: translateY(300px);
 }
 
-@media only screen and (max-width: 600px) {
-  .Customizer {
-    position: fixed;
-    right: 0;
-    bottom: 53px;
-    width: 100%;
-  }
-}
+/* Cannot determine why the media query was neccessary here. */
+/* Removed */
+
+/*@media only screen and (max-width: 600px) {*/
+/*  .Customizer {*/
+/*    position: fixed;*/
+/*    right: 0;*/
+/*    bottom: 53px;*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
