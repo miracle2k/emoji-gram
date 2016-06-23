@@ -14,6 +14,9 @@ class Phrase extends React.Component {
 
   _handleChange(e) {
     this.props._setState({ 'phrase': e.target.value });
+    setTimeout( _ => {
+         this.gotoBottom();
+    }, 50);
   }
 
   _handlePaste(e) {
@@ -25,12 +28,18 @@ class Phrase extends React.Component {
     this.refs.editor.focus();
   }
 
+  gotoBottom(){
+     var div = document.getElementsByClassName('Art')[0]
+     div.scrollTop = div.scrollHeight; 
+  }
+
   render() {
     const {phrase} = this.props;
     return (
       <div className="Phrase">
         <div className="field">
           <input type="text" name="phrase" id="phrase" autoFocus
+                 autoComplete={false} 
                  ref="editor"
                  value={phrase}
                  placeholder="TYPE HERE"
