@@ -3,7 +3,7 @@
 ### A reactjs emoji word-art generator
 Like ascii art, type a phrase and this app will render emoji letterforms. Check out the demo [here](http://lobdell.me/emoji-gram).
 
-![screenshot](ohno_emoji.png)
+![screenshot](emoji-demo.gif)
 
 ### Install
 First clone or download the app to your local machine, then install all dependencies with:
