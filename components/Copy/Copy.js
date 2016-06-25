@@ -11,6 +11,21 @@ class Copy extends React.Component {
     }
 
     this._handleClick = this._handleClick.bind(this);
+    this.showCopiedMessage = this.showCopiedMessage.bind(this);
+  }
+
+  componentDidMount(){
+    var clipboard = this.clipboard = new Clipboard('#copy');
+
+    clipboard.on('success', e =>  {
+        e.clearSelection();
+        this.showCopiedMessage();
+
+    });
+
+    clipboard.on('error', function(e) {
+        //TODO show info for Safari?
+    });
   }
 
   _handleClick() {
@@ -19,7 +34,15 @@ class Copy extends React.Component {
     setTimeout(function() {
       that.setState({ showAlert: false });
     }, 3000);
-    this.selectText('art');
+    
+    //this.selectText('art');
+  }
+
+  showCopiedMessage(){
+    this.setState({ showAlert: true });
+    setTimeout( _ => {
+      this.setState({ showAlert: false });
+    }, 3000);
   }
 
   selectText(elem) {
@@ -39,9 +62,9 @@ class Copy extends React.Component {
 
     return (
       <div className="Copy" hidden={this.props.phrase === ''}>
-        <button className="select-btn" type="button" id="copy" data-clipboard-target="#art" onClick={this._handleClick}>
+        <button className="select-btn" type="button" id="copy" data-clipboard-target="#art">
           <span hidden={this.state.showAlert}>SELECT EMOJI</span>
-          <span hidden={!this.state.showAlert}>SELECT EMOJI</span>
+          <span hidden={!this.state.showAlert}>COPIED!</span>
         </button>
       </div>
     );
