@@ -1,13 +1,11 @@
 .Art {
   box-sizing: border-box;
-  position: fixed;
-  right: 0;
-  top: 0;
+  width: 330px;
+  margin: 0 auto;
+  position: relative;
   bottom: 80px;
-  left: 0;
   display: block;
-  width: 100%;
-  padding: 100px 50px 0;
+  padding: 175px 50px 0;
   overflow: auto;
   color: #aaa;
   text-align: center;
@@ -16,7 +14,7 @@
   opacity: 1;
   -webkit-transform: translateY(0);
   white-space: pre;
-  line-height: 18pt;
+  line-height: 16.5pt;
 }
 
 textarea{
