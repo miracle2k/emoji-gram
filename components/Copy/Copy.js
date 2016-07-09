@@ -26,7 +26,9 @@ class Copy extends React.Component {
     clipboard.on('error', function(e) {
         //Safari
         var ele = document.getElementById('art');
-        ele && ele.select();
+        // ele && ele.select();
+        this.selectionStart=0; 
+        this.selectionEnd=this.ele.length;
     });
   }
 
