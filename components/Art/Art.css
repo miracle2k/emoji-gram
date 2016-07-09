@@ -24,9 +24,18 @@
   font-size: 16px;
   border: none;
   resize: none;
+  letter-spacing: -4px;
+  text-rendering: geometricPrecision;
+  width: 200px;
+  text-align: center;
 }
 
 .Art[hidden] {
   opacity: 0;
   -webkit-transform: translateY(50px);
+}
+
+textarea{
+  font-size: 16px;
+  border: none;
 }
