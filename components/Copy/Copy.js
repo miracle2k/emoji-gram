@@ -24,7 +24,9 @@ class Copy extends React.Component {
     });
 
     clipboard.on('error', function(e) {
-        //TODO show info for Safari?
+        //Safari
+        var ele = document.getElementById('art');
+        ele && ele.select();
     });
   }
 
@@ -58,8 +60,6 @@ class Copy extends React.Component {
   }
 
   render() {
-    new Clipboard('#copy');
-
     return (
       <div className="Copy" hidden={this.props.phrase === ''}>
         <button className="select-btn" type="button" id="copy" data-clipboard-target="#art">
