@@ -3,11 +3,11 @@
   position: fixed;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 80px;
   left: 0;
   display: block;
   width: 100%;
-  padding: 100px 50px;
+  padding: 100px 50px 0;
   overflow: auto;
   color: #aaa;
   text-align: center;
@@ -18,24 +18,17 @@
   white-space: pre;
 }
 
-.Art textarea{
+textarea{
   overflow:hidden;
   min-height: 200px;
   font-size: 16px;
   border: none;
   resize: none;
-  letter-spacing: -4px;
-  text-rendering: geometricPrecision;
-  width: 200px;
+  width: 50%;
   text-align: center;
 }
 
 .Art[hidden] {
   opacity: 0;
   -webkit-transform: translateY(50px);
-}
-
-textarea{
-  font-size: 16px;
-  border: none;
 }

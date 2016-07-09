@@ -72,8 +72,8 @@ class Art extends React.Component {
     }
 
     return (
-		<textarea value={art.join('')} id="art" hidden={this.props.phrase === ''} className="Art" ref="textarea">
-		</textarea>
+			<textarea value={art.join('')} id="art" hidden={this.props.phrase === ''} className="Art" ref="textarea">
+			</textarea>
     );
   }
 }
