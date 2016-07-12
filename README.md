@@ -1,7 +1,7 @@
 # Emoji-gram
 
 ### A reactjs emoji word-art generator
-Like ascii art, type a phrase and this app will render emoji letterforms. Check out the demo [here](http://lobdell.me/emoji-gram).
+Like ascii art, type a phrase and this app will render emoji letterforms. Check out the demo [emojigram.ohnotype.co](http://emojigram.ohnotype.co).
 
 ![screenshot](emoji-demo.gif)
 
