@@ -18,7 +18,8 @@ class App extends React.Component {
             'shading': '❄️',
             'fill': '❤️',
             'phrase': '',
-            'art': ''
+            'art': '',
+            zoom: 2
         };
     }
 
@@ -31,6 +32,10 @@ class App extends React.Component {
 
         return (
             <div className="app">
+                <input type="number" step="1"
+                        value={this.state.zoom}
+                        onChange={e => this.setState({zoom: e.target.value})}
+                />
                 <Phrase
                     phrase={phrase}
                     _setState={(e) => this._setState(e)}/>
@@ -40,7 +45,10 @@ class App extends React.Component {
                         _setState={(e) => this._setState(e)}
                         phrase={phrase}
                         fill={fill}
-                        shading={shading}/>
+                        shading={shading}
+                        zoom={this.state.zoom}
+                        fontSize={16 / this.state.zoom}
+                    />
                     <Copy
                         phrase={phrase}
                         art={art}/>

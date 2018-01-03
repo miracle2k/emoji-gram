@@ -1,6 +1,6 @@
 .Art {
   box-sizing: border-box;
-  width: 330px;
+  width: 530px;
   margin: 0 auto;
   position: relative;
   bottom: 80px;
@@ -20,10 +20,9 @@
 textarea{
   overflow:hidden;
   min-height: 200px;
-  font-size: 16px;
   border: none;
   resize: none;
-  width: 50%;
+  width: 80%;
   text-align: center;
 }
 

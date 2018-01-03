@@ -61,18 +61,35 @@ class Art extends React.Component {
     var that = this;
     //TODO Add all the patterns
 
+
     var art = [];
     var phrase = '-' + this.props.phrase.toLowerCase();
     if (phrase.length > 1) {
       phrase = phrase.replace(/ /gi, '-');
       art = phrase.split('').map(function (v, k) {
-		  var pattern = patterns[v] || patterns['-'];
-		  return pattern.replace(/x/gi, that.props.shading).replace(/o/gi, that.props.fill);
+			  var pattern = patterns[v] || patterns['-'];
+
+			  // zoom the pattern
+			  pattern = Array.from(pattern).map(ch => ch == "\n" ?  ch : ch.repeat(that.props.zoom || 2)).join('');
+
+			  var newPattern = [];
+			  pattern.split('\n').forEach(patternLine => {
+			  	for (let i=0; i<that.props.zoom; i++) {
+			  		newPattern.push(patternLine);
+			  	}
+			  })
+			  pattern = newPattern.join('\n');
+
+			  var result = pattern.replace(/x/gi, that.props.shading).replace(/o/gi, that.props.fill);
+
+			  return result;
       });
     }
 
     return (
-			<textarea value={art.join('')} id="art" hidden={this.props.phrase === ''} className="Art" ref="textarea">
+			<textarea value={art.join('')} id="art" hidden={this.props.phrase === ''}
+			    className="Art" ref="textarea"
+			    style={{fontSize: `${this.props.fontSize}px`, lineHeight: `${this.props.fontSize}px`}}>
 			</textarea>
     );
   }
